@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="index-css.css">
+	
+	<!--adding firebase api-->
+	<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyDU4YP41ybG0p1H2VC_WcaFB8bYPmk9Kyk",
+	    authDomain: "timeoftravel-d783b.firebaseapp.com",
+	    databaseURL: "https://timeoftravel-d783b.firebaseio.com",
+	    projectId: "timeoftravel-d783b",
+	    storageBucket: "",
+	    messagingSenderId: "690727777335"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+
+	<!--adding google traffic layer api-->
+	<script>
+	function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 13,
+    center: {lat: 19.01441, lng: 72.8479}
+  });
+
+  var trafficLayer = new google.maps.TrafficLayer();
+  trafficLayer.setMap(map);	
+	}
+	</script>
+	
+
+</head>
+<body>
+	<div id="map"></div>
+	<!-- Replace the value of the key parameter with your own API key. -->
+	<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap">
+</script>
+</body>
+</html>
